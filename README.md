@@ -1,473 +1,521 @@
-<p align="center"><a href="https://shen-yu.gitee.io" target="_blank" rel="noopener noreferrer"><img width="100" src="logo.png" alt="ayer logo"></a></p>
+# Hexo-Theme-LiveMyLife
 
-<h3 align="center">一个安静且优雅的 Hexo 主题</h3>
+> Ported Theme of [Hux Blog](https://github.com/Huxpro/huxpro.github.io), Thank [Huxpro](https://github.com/Huxpro) for designing such a flawless theme.
+>
+> This LiveMyLife theme created by [Vincent](https://v-vincen.github.io/) modified from the original Porter [YenYuHsuan](https://github.com/YenYuHsuan/hexo-theme-beantech) , refer to the Themes of [dusign](https://github.com/dusign/hexo-theme-snail)、[Utone](https://github.com/shixiaohu2206/hexo-theme-huhu), Thanks [dusign](https://github.com/dusign/hexo-theme-snail)、[Utone](https://github.com/shixiaohu2206/hexo-theme-huhu).
+>
 
-<p align="center">
-  <a href="https://travis-ci.org/Shen-Yu/hexo-theme-ayer?branch=master" target="_blank" rel="noopener noreferrer">
-    <img alt="travis-ci" src="https://travis-ci.org/Shen-Yu/hexo-theme-ayer.svg?branch=master">
-  </a>
-  <a href="http://standardjs.com" target="_blank" rel="noopener noreferrer">
-    <img alt="js-standard-style" src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg">
-  </a>
-  <br>  
-  <a href="https://www.npmjs.com/package/hexo-theme-ayer" target="_blank" rel="noopener noreferrer">
-  <img alt="npm" src="https://img.shields.io/npm/dt/hexo-theme-ayer">
-  </a>
-  <a href="https://shen-yu.gitee.io" target="_blank" rel="noopener noreferrer">
-   <img alt="platform" src="https://img.shields.io/badge/platform-PC--ios--android-ff69b4.svg">
-   </a>
-  <a href="https://gitter.im/hexo-theme-ayer/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge" target="_blank" rel="noopener noreferrer">
-    <img alt="Gitter" src="https://badges.gitter.im/Join%20Chat.svg">
-  </a>
-  <br>
-  <a href="https://www.npmjs.com/package/hexo-theme-ayer" target="_blank" rel="noopener noreferrer">
-    <img alt="npm version" src="https://img.shields.io/npm/v/hexo-theme-ayer">
-  </a> 
- <img alt="language" src="https://img.shields.io/badge/language-ejs--stylus-green.svg">
- <a href="https://github.com/Shen-Yu/hexo-theme-ayer/releases" target="_blank" rel="noopener noreferrer">
-  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Shen-Yu/hexo-theme-ayer?color=b37feb">
-  </a>
-  <a href="https://github.com/Shen-Yu/hexo-theme-ayer/blob/master/LICENSE" target="_blank" rel="noopener noreferrer"><img alt="LICENSE" src="https://img.shields.io/badge/LICENSE-SATA-6ccab8">
-  </a>
-</p>
+[中文说明](/README_CN.md)
 
----
+## Repo
 
-:ocean: Ayer is a clean and elegant theme for Hexo, also fast, powerful and responsive. It contains many awesome features, It's perfect for your blog, "Ayer" means "water" in Malaysian and "yesterday" in Spanish. If you have any queries or advice during the process of using, Please contact me! shenyu@hotmail.com
+Github Repo: https://github.com/V-Vincen/hexo-theme-livemylife
 
-<b>注：收藏本主题请点右上角 Star，谢谢~~ </b>
-<b>如果你想给主题添砖加瓦，可以点右上角 Fork，然后给此仓库提交 PR</b>
+Gitee Repo: https://gitee.com/V_Vincen/hexo-theme-livemylife
 
-### [Preview 预览](https://shen-yu.gitee.io)
 
-### [中文说明](https://shen-yu.gitee.io/2019/ayer/)
+### [View LiveMyLife Blog ➾](https://v-vincen.github.io/)
 
-### [国内镜像](https://gitee.com/shen-yu/hexo-theme-ayer)
 
-![Screenshot](screenshots/hexo-theme-ayer.png)
+![LiveMyLife Desktop](/source/_posts/en/Hexo-Theme-LiveMyLife/livemylife-desktop.png)
 
-## Install
+## Quick Start
 
-### For hexo >= 5.0
+I publish the whole project for your convenience, so you can just follow the instruction down below, then you can easily customiz your own blog!
 
+Let's begin!!!
+
+### Install Node.js and Git
 ```shell
-npm i hexo-theme-ayer -S
+#For Mac
+brew install node
+brew install git
+```
+> Windows: Download & install Node.js. -> [Node.js](https://nodejs.org/zh-cn/download/)
+>
+> Windows: Download & install Git. -> [Git](https://git-scm.com/download/win)
+
+### Install Hexo
+```shell
+$ npm install -g hexo-cli
+```
+> What is [Hexo](https://hexo.io/docs/)?
+>
+> Hexo is a fast, simple and powerful blog framework. You write posts in Markdown (or other markup languages) and Hexo generates static files with a beautiful theme in seconds.
+
+### Setup your blog
+```shell
+$ hexo init blog
+```
+> More Commands -> [Hexo Commands](https://hexo.io/docs/commands)
+
+
+## Theme Usage
+### Init
+```shell
+cd blog
+rm -rf scaffolds source themes _config.landscape.yml _config.yml package.json yarn.lock #just keep node_modules
+git clone https://github.com/V-Vincen/hexo-theme-livemylife.git
+mv hexo-theme-livemylife/* ./
+rm -rf hexo-theme-livemylife
+npm install
 ```
 
-- If this theme is newly installed, a `_config.ayer.yml` file will be generated in the root directory after the installation is complete, and you can directly edit the `_config.ayer.yml` file for configuration.
-- If it is a theme upgrade, you can use the configuration method of hexo < 5.0, or you can move the original configuration file to the root directory and rename it to `_config.ayer.yml`.
-
-### For hexo < 5.0
-
-```shell
-git clone https://github.com/Shen-Yu/hexo-theme-ayer.git themes/ayer
-```
-
-## Enable
-
-Modify `theme` setting in `_config.yml` to `ayer`
-
+### Set Theme
+Modify the value of `theme`: in `_config.yml`
 ```yml
-theme: ayer
+# Extensions
+## Themes: https://hexo.io/themes/
+## Plugins: https://hexo.io/plugins/
+theme: livemylife
 ```
 
-## Update
-
-```bash
-cd themes/ayer
-git pull
+### Start the Server
+```shell
+hexo generate # or hexo g
+hexo server   # or hexo s
 ```
-
-## Multi Language Support
-
-zh-CN（中文简体） en（English） zh-TW（中文繁体） ja（日本語） es（Español） de（Deutsch） fr（Français） ru（Русский） ko（한국어） vi（Tiếng Việt） nl（Nederlands） no（norsk） pt（Português）
-
-English is default languge, if you want to change, modify `language` option in `_config.yml` file in your Hexo blog's root folder.
+Starts a local server. By default, this is at `http://localhost:4000/`.
+> More Commands -> [Hexo Commands](https://hexo.io/docs/commands)
 
 ## Configuration
+Modify `_config.yml` file with your own info, Especially the section:
 
-let me know if you have any questions.
-
+### Site
+Replace the following information with your own.
 ```yml
-# Menu-Sidebar
-menu:
-  Home: /
-  Archives: /archives
-  Categories: /categories
-  Tags: /tags
-  Gallery: http://shenyu-vip.lofter.com
-  Travel: /tags/旅行/
-  About: /2019/about
+# Site
+title: Live My Life
+subtitle: 淡而无味也是一种味道
+author: Mr.Vincent
+timezone:
+```
 
-# Subtitle and Typing animation
-# https://github.com/mattboldt/typed.js
-subtitle:
-  enable: true
-  text: A clean and elegant theme
-  text2: It's perfect for your hexo blog
-  text3: Have fun! #Supports up to three lines of text
-  startDelay: 0
-  typeSpeed: 200
-  loop: true
-  backSpeed: 100
-  showCursor: true
+### Internationalization (i18n)
+You can use internationalization to present your site in different languages. -> Docs：[How to Use Internationalization（i18n）](https://v-vincen.github.io/en/How-to-Use-Internationalization%EF%BC%88i18n%EF%BC%89/)
+```yml
+# Internationalization (i18n) Setting
+language: # At present, only en、cn and tw are supported. You can customize the language，refer to `languages/en.yml`.
+  - en
+  - cn
 
-# Favicon and sidebar logo
-favicon: /favicon.ico
-logo: /images/ayer-side.svg
+langselect:
+  enable: true # If open, it will automatically generation lang-select button.This button can jump in articles in different languages, but the articles must have the same name.
+  options: # langselect button display options
+    en: English
+    cn: 简体中文
+    # tw: 正體中文
 
-# Cover Setting
-# enable: [true|false]；path: [background-image]；logo: [cover-logo-image]
-cover:
-  enable: true
-  path: /images/cover1.jpg # there are some beautiful cover images in Ayer's directory: /source/images, choose your favorite image to replace it.
-  logo: /images/ayer.svg
+i18n_dir: :lang  
+permalink: :lang/:title/
+new_post_name: :lang/:title.md
 
-# ProgressBar
-progressBar: true
+# hexo-generator-i18n config
+## Docs: https://github.com/xcatliu/hexo-generator-index-i18n
+index_generator:
+  per_page: 10
+  pagination_dir: page
+  path: ''
+  order_by: -date
 
-# Boardcast
-broadcast:
-  enable: true
-  type: 2 # 1：custom，2：hitokoto api(https://hitokoto.cn/)
-  text: a clean and elegant theme, fast and responsive. # only work in custom mode
+archive_generator:
+  enabled: false
+  per_page: 10
+  yearly: true
+  monthly: true
+  daily: false
+  order_by: -date
+```
+*English preview:*
 
-# Article Setting
-# (Use this to excerpt if article is too long：<!--more-->)
-excerpt_link: Read More...
-excerpt_all: false
+![en](/source/_posts/en/Hexo-Theme-LiveMyLife/langen.png)
 
-# Copy code button
-copy_btn: true
-# Share
-share_enable: true
-# If you are not in China, maybe you prefer to set:false
-share_china: true
-# share text
-share_text: Share
-# search text
-search_text: Search
-# nav text
-nav_text:
-  page_prev: Prev page
-  page_next: Next page
-  post_prev: Newer posts
-  post_next: Older posts
+*Chinese preview:*
 
-# Catalog in article
-toc: true
+![cn](/source/_posts/en/Hexo-Theme-LiveMyLife/langcn.png)
 
-# images in the article support click to fullscreen
-image_viewer: true
 
-# https://github.com/willin/hexo-wordcount
-word_count:
-  enable: true
-  # only display in article page(not in index page)
-  only_article_visit: true
+### CDN Settings
+JsDelivr is A free CDN for Open Source fast、reliable and automated. How to use Jsdelivr? -> Docs：[免费 CDN 提速 Github 静态资源访问](https://v-vincen.github.io/en/Github-%E5%8A%A0%E9%80%9F%E4%BC%98%E5%8C%96/#%E5%85%8D%E8%B4%B9-CDN-%E6%8F%90%E9%80%9F-Github-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E8%AE%BF%E9%97%AE)
+```yml
+# CDN Setting
+# Docs: https://www.jsdelivr.com/?docs=gh
+# If Github Pages deploy，you can ues jsdelivr settings
+#
+jsdelivr:
+  jsdelivr_url: https://cdn.jsdelivr.net/gh/
+  github_username: V-Vincen
+```
+**Note:** The theme of Hexo-theme-livemylife has a large number of css、js and images, in order to improve access speed, the theme for all of the resource files are made JsDelivr CDN. But only for Github Pages deployment. -> Docs：[How to apply JsDelivr CDN in Hexo-theme-livemylife Theme](https://v-vincen.github.io/en/How-to-apply-JsDelivr-CDN-in-Hexo-theme-livemylife-Theme/)
 
-# Reward Setting
-# type：0-close reward； 1-only open in article which you have configured reward:true； 2-open in all articles
-reward_type: 2
-# reward word
-reward_wording: "Buy me a cup of coffee~"
-# qrcode image path
-alipay: /images/alipay.jpg
-# qrcode image path
-weixin: /images/wechat.jpg
 
-# Copyright
-# type：0-close all； 1-only display in article which you have configured copyright: true； 2-all articles
-copyright_type: 2
+### Site Settings
+Put customized pictures in img directory.
+```yml
+# Site settings
+SEOTitle: JavaDev | 一如Java深似海
+email: hexo-theme-livemylife@mail.com
+description: "It's an IT blog..."
+keyword: "Java,v-vincen,v-vincen,livemylife,IT  blog,Blog"
+header-img: img/header_img/newhome_bg.jpg
+archives-img: img/header_img/archive_bg2.jpg
+```
 
-# Search
-# https://github.com/theme-next/hexo-generator-searchdb
-search: true
+### Favicon Settings
+```yml
+favicon: img/avatar/favicon.jpg
+```
 
-# RSS
-# leave it empty if you dont' need
-rss: /atom.xml
+### Signature Settings
+Copy your signature image to `<root>/img/signature` and modify the `_config.yml`.
+```yml
+signature: true   # show signature
+signature-img: img/signature/<your-signature>
+```
+> How to create signature -> [Free Online Signature](https://fontmeme.com/signature-fonts/)
 
-# DarkMode
-darkmode: true
+### Wave Settings
+```yml
+# Wave settings
+wave: true
+```
+*Example:*
 
-# Canvas background style: 0-close，1-moveline
-canvas_bg: 0
+![wave](/source/_posts/en/Hexo-Theme-LiveMyLife/wave.png)
 
-# Custom mouse pointer，replace /images/mouse.cur
-mouse:
-  enable: false
-  path: /images/mouse.cur
 
-# Click effect: 0-close，1-love，2-boom，3-particles
-click_effect: 0
+### SNS Settings
+If you don’t want to display it, you can delete it directly.
+```yml
+# SNS settings
+# RSS: true
+github_username: V-Vincen
+twitter_username: V_Vincen_
+instagram_username: V_Vincen_
+# facebook_username:  yourAccount
+# linkedin_username:  yourAccount
+# zhihu_username: yourAccount
+weibo_username: WVincen
+```
 
-# articleWidth and sidebarWidth
-layout:
-  article_width: 80rem
-  sidebar_width: 8rem
+### Sidebar Settings
+Copy your avatar image to `<root>/img/avatar` and modify the `_config.yml`:
+```yml
+sidebar: true   # whether or not using Sidebar.
+sidebar-about-description: "I don't know where I am going ,but I am on my way..."
+sidebar-avatar: img/avatar/vincnet.jpg    # use absolute URL, seeing it's used in both `/` and `/about/`
+widgets:
+- visitor   # busuanzi: https://busuanzi.ibruce.info/
+- featured-tags
+- short-about
+- recent-posts
+- friends-blog
+- archive
+- category
 
-# GitHub Ribbons(https://github.blog/2008-12-19-github-ribbons/)
-github:
-  # (Set false if you don't need)
-  enable: false
-  url: https://github.com/Shen-Yu/hexo-theme-ayer
+# widget behavior
+## Archive
+archive_type: 'monthly'
+show_count: true
 
-# pv&uv statistics
-busuanzi:
-  enable: true
+## Featured Tags
+featured-tags: true   # whether or not using Feature-Tags
+featured-condition-size: 0    # A tag will be featured if the size of it is more than this
 
-# cnzz statistics
-cnzz:
-  enable: true
-  url: #
+## Friends
+friends: [
+    {
+        title: "V_Vincen",
+        href: "https://v-vincen.life/"
+    },{
+        title: "Teacher Ye",
+        href: "http://teacherye.com/"
+    }
+]
+```
 
-# Google Analytics
-google_analytics: ""
-# Baidu Analytics
-baidu_analytics: ""
+### Comment Settings
+Hexo-Theme-LiveMyLife temporarily supports three Comments. I use gitalk comment system.
 
-# Mathjax Support
-mathjax: true
-
-# Katex Support
-# note: need change the hexo-renderer，npm un hexo-renderer-marked -S && npm i hexo-renderer-markdown-it-katex -S
-katex:
-  enable: false # true
-  allpost: true
-  copy_tex: false
-
-# since year
-since: 2019
-
-# only for chinese website
-# ICP
-icp:
-  enable: false
-  url: "http://www.beian.miit.gov.cn/"
-  text: "浙ICP备88888888"
-# gongan
-gongan:
-  enable: false
-  img: /images/beian.png
-  url: "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=01234567890123" #link
-  text: "浙公网安备01234567890123号"
-
-# friends link
-friends_link:
-  Ayer: #site name
-    # site url
-    url: https://github.com/Shen-Yu/hexo-theme-ayer
-    # site icon(optional)
-    img: /images/ayer.png
-  GitHub:
-    url: https://github.com/Shen-Yu
-    img: https://i.loli.net/2020/09/07/indb4PRYDA98EkN.png
-  gitee:
-    url: https://gitee.com/shen-yu
-    img: https://i.loli.net/2020/09/07/K3AqO7h6krQFlRX.png
-  Hexo:
-    url: https://hexo.io
-    img: https://i.loli.net/2020/09/07/UYGzjo7h68CRWny.png
-  hexo-tag-chart:
-    url: https://github.com/Shen-Yu/hexo-tag-chart
-    img: https://i.loli.net/2020/09/07/GIXBYE5SoylhR1r.png
-
-# Comment：1、Valine (recommended)；2、Gitalk；3、Twikoo；4、MiniValine
-# You can close the comment section on one of your posts by marking `comments: false` in front-matter.
-
-# 1、Valine [A fast, simple & powerful comment system](https://github.com/xCss/Valine)
-# You need create leancloud account first (https://console.leancloud.app), then put the id|key in below.
-leancloud:
-  enable: true
-  app_id: #
-  app_key: #
-# Valine Setting
-valine:
-  enable: true
-  avatar: mp # (https://valine.js.org/avatar.html)
-  placeholder: Add some comments to my article~ # placeholder
-
-# 2、Gitalk(https://github.com/gitalk/gitalk)
+#### Gitalk
+Gitalk is a modern comment component based on GitHub Issue and Preact. See [Gitalk](https://github.com/gitalk/gitalk) for detailed configuration method.
+```yml
+# Gitalk Settings
+# Doc:https://github.com/gitalk/gitalk/blob/master/readme-cn.md
 gitalk:
-  enable: false # true
-  clientID: # GitHub Application Client ID
-  clientSecret: # Client Secret
-  repo: # Repository name
-  owner: # GitHub ID
-  admin: # GitHub ID
-
-# 3、Twikoo(https://github.com/imaegoo/twikoo)
-twikoo:
-  enable: false
-  envId: #
-
-# 4、MiniValine
-# See: https://github.com/MiniValine/MiniValine
-minivaline:
-  enable: false
-  serverURL: https://minivaline.your-domain.com
-
-# advertisement
-# if there is an "ad" word in photo or url，it may blocked by adblock or any other browser extensions
-ads:
-  ad_1:
-    title: vultr优惠vps
-    img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/vultr.png
-    url: https://www.vultr.com/?ref=8630075
-    width: 300
-  ad_2:
-    title: 云服务器全球购低至2折
-    img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/ten_2.jpg
-    url: https://curl.qcloud.com/kvO7hb43
-    width: 300
-
-# encrypt settings
-lock:
-  enable: false
-  password: 123456
+  owner:                          # 'GitHub repo owner'
+  admin:                          # ['GitHub repo owner and collaborators, only these guys can initialize github issues']
+  repo:                           # 'GitHub repo'
+  clientID:                       # 'GitHub Application Client ID'
+  clientSecret:                   # 'GitHub Application Client Secret'
+  perPage: 10                     # Pagination size, with maximum 100.
+  pagerDirection: last            # Comment sorting direction, available values are last and first.
+  createIssueManually: false      # By default, Gitalk will create a corresponding github issue for your every single page automatically when the logined user is belong to the admin users. You can create it manually by setting this option to true
+  language: en                    # Localization language key, en, zh-CN and zh-TW are currently available.
+  maxCommentHeight: 250           # An optional number to limit comments' max height, over which comments will be folded.Default 250.
+  proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token                    # GitHub oauth request reverse proxy for CORS. For example, the demo url is 'https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token'. You should deploy your own proxy url as in this issue https://github.com/gitalk/gitalk/issues/429.
 ```
 
-## Plugins
+#### Gitment
+Gitment is a comment system based on GitHub Issues, which can be used in the frontend without any server-side implementation. See [Gitment](https://github.com/imsun/gitment) for detailed configuration method.
+```yml
+## Gitment Settings
+## Doc: https://github.com/imsun/gitment
+gitment:
+  owner:                          # Your GitHub ID. Required.
+  repo:                           # The repository to store your comments. Make sure you're repo's owner. Required.
+  client_id:                      # GitHub client ID. Required.
+  client_secret:                  # GitHub client secret. Required.
+  desc:                           # An optional description for your page, used in issue's body. Default ''.
+  perPage: 10                     # An optional number to which comments will be paginated. Default 20.
+  maxCommentHeight: 250           # An optional number to limit comments' max height, over which comments will be folded. Default 250.
+```
 
-- [hexo-generator-search](https://github.com/wzpan/hexo-generator-search) (for Local Search)
+#### Disqus
+If you want use [Disqus](https://disqus.com/), you must have a circumvention (proxy, clime over the firewall) technology.
+```yml
+# Disqus settings
+disqus_username: your-disqus-ID
+```
 
-  ```yml
-  $ npm install hexo-generator-searchdb --save
-  ```
 
-  Then add the plugin configuration in hexo's configuration file `_config.yml` (note: not the theme's configuration file):
+### Analytics Settings
+How to config Analytics? -> Docs:[Analytics and Sitemap Settings](https://v-vincen.github.io/en/Analytics-and-Sitemap-Settings/)
+```yml
+# Analytics settings
+# Google Analytics
+ga_track_id: UA-xxxxxx-xx   # Format: UA-xxxxxx-xx
 
-  ```yml
-  # Hexo-generator-search
-  search:
-    path: search.xml
-    field: post
-    format: html
-  ```
+# Baidu Analytics
+ba_track_id: ba_track_id
+```
 
-- [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) (for RSS)
+### Sitemap Settings
+How to config Sitemap? -> Docs:[Analytics and Sitemap Settings](https://v-vincen.github.io/en/Analytics-and-Sitemap-Settings/)
+```yml
+# Google sitemap
+sitemap:
+  path: sitemap.xml
 
-  ```yml
-  $ npm install hexo-generator-feed --save
-  ```
+# Baidu sitemap
+baidusitemap:
+  path: baidusitemap.xml
 
-  Then add the plugin configuration in hexo's configuration file `_config.yml` (note: not the theme's configuration file):
+baidu_push: true
+```
 
-  ```yml
-  feed:m
-      type: atom
-      path: atom.xml
-      limit: 20
-      hub:
-      content:
-      content_limit: 140
-      content_limit_delim: ' '
-      order_by: -date
-  ```
 
-- [hexo-generator-index-pin-top](https://github.com/netcan/hexo-generator-index-pin-top) (for Sticky Post)
+### Go to top icon Setup
+My icon is using point, you can change to your own icon at `sourcre/css/images`.
 
-  ```bash
-  $ npm uninstall hexo-generator-index --save
-  $ npm install hexo-generator-index-pin-top --save
-  ```
+### Post tag
+You can decide to show post tags or not.
+```yml
+home_posts_tag: true
+```
+*Example:*
 
-## Categories
+![home_posts_tag-true](/source/_posts/en/Hexo-Theme-LiveMyLife/home_posts_tag-true.png)
+
+
+### Markdown render
+My markdown render engine plugin is [hexo-renderer-markdown-it](https://github.com/celsomiranda/hexo-renderer-markdown-it).
+```yml
+# Markdown-it config
+## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+```
+
+### Install Mathjax
+To install Mathjax, please click [How to Use Mathjax](https://v-vincen.github.io/en/How-to-Use-Mathjax/) for a detailed tutorial.
+
+### Anchorjs Settings
+And if you want to change the header anchor '❡', you can go to `layout/_partial/anchorjs.ejs` to change it. How to use anchorjs, see [AnchorJS](https://www.bryanbraun.com/anchorjs/#examples) for detailed examples.
+```yml
+# Anchorjs Settings
+anchorjs: true    # if you want to customize anchor. check out line:26 of `layout/_partial/anchorjs.ejs`
+```
+
+```javascript
+async("//cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: '❡'
+          // icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+```
+
+### Article Top
+```yml
+# article top
+top: true
+```
+Hexo-theme-livemylife has added the article top function, just add `sticky: number` configuration to your markdown notes, articles are sorted by this number.
+*Example:*
+
+![top](/source/_posts/en/Hexo-Theme-LiveMyLife/top.png)
+
+### WordCount Settings
+A Word Count Plugin for Hexo. See [WordCount](https://github.com/willin/hexo-wordcount) for detailed configuration method.
+```yml
+# Dependencies: https://github.com/willin/hexo-wordcount
+# Docs: https://www.npmjs.com/package/hexo-wordcount
+wordcount: true
+```
+
+### Busuanzi Settings
+Busuanzi is a website traffic statistics plugin. How to use Busuanzi, see [Busuanzi](https://ibruce.info/2015/04/04/busuanzi/) for detailed examples.
+```yml
+## Dependencies: https://busuanzi.ibruce.info/
+## Docs: https://ibruce.info/
+busuanzi: true
+```
+
+
+### Top scroll progress
+```yml
+# top scroll progress
+scroll: true
+```
+
+### Tip
+```yml
+tip:
+  enable: true
+  copyright: Say what you think... # If the copyright is blank, the default value will be used.
+```
+
+### Social Share Post
+```yml
+#Docs: https://github.com/overtrue/share.js
+share: true
+```
+
+### Viewer Config
+Viewer is a simple jQuery image viewing plugin. Let us first look at a [demo](https://fengyuanchen.github.io/viewer/). See [Viewer](https://github.com/fengyuanchen/viewer) for detailed configuration. If you want to modify the [options](https://github.com/fengyuanchen/viewerjs#options) of Viewer, you can go to `sourcre/js/viewer/pic-viewer.js` to change it.
+```yml
+# Viewer config
+viewer: true
+```
+
+### Theme Color Config
+Hexo-Theme-LiveMyLife temporarily supports two themes color.
+```yml
+themecolor: true
+```
+*Light theme preview:*
+
+![light theme](/source/_posts/en/Hexo-Theme-LiveMyLife/light.png)
+
+*Dark theme preview:*
+
+![dark theme](/source/_posts/en/Hexo-Theme-LiveMyLife/dark.png)
+
+
+### Mouseclick Config
+```yml
+# Mouseclick config
+mouseclick:
+  enable: true
+  content:
+    - The first step is as good as half over...
+    - Laugh and grow fat...
+    - Man proposes God disposes...
+    - When all else is lost the future still remains...
+    - Wasting time is robbing oneself...
+    - Sharp tools make good work...
+    - Cease to struggle and you cease to live...
+    - A friend in need is a friend indeed...
+    - Faith can move mountains...
+  color:
+    - '#9933CC'
+    - '#339933'
+    - '#66CCCC'
+    - '#FF99CC'
+    - '#CCCCFF'
+    - '#6666CC'
+    - '#663399'
+    - '#66CC99'
+    - '#FF0033'
+```
+*Mouseclick preview:*
+
+![mouseclick](/source/_posts/en/Hexo-Theme-LiveMyLife/mouseclick.png)
+
+
+### Ribbon Config
+```yml
+ribbonDynamic: true
+```
+*Ribbon preview:*
+
+![ribbon](/source/_posts/en/Hexo-Theme-LiveMyLife/ribbon.png)
+
+
+### BgLineCanvas Config
+```yml
+bglinecanvas: true  # The special effects will take up a lot of cpu resorces, please open it carefully.
+```
+*BgLineCanvas preview:*
+
+![bglinecanvas](/source/_posts/en/Hexo-Theme-LiveMyLife/bglinecanvas.png)
+
+
+### Search Settings
+```yml
+# Dependencies: https://github.com/V-Vincen/hexo-generator-zip-search
+search:
+  enable: true
+  path: search.json
+  zipPath: search.flv
+  versionPath: searchVersion.json
+  field: post
+  # if auto, trigger search by changing input
+  # if manual, trigger search by pressing enter key or search button
+  trigger: auto
+  # show top n results per article, show all results by setting to -1
+  top_n_per_article: 1
+```
+
+### Gitter
+Gitter is a chat and network platform that helps manage, develop and connect communities through messages, content and discovery.See [Gitter](https://gitter.im/) for detailed configuration method.
+```yml
+## Docs:https://gitter.im/?utm_source=left-menu-logo
+##
+gitter:
+  room: your-community/your-room
+```
+
+### Deployment
+Replace to your own repo!
+```yml
+deploy:
+  type: git
+  repo: https://github.com/<yourAccount>/<repo> # or https://gitee.com/<yourAccount>/<repo>
+  branch: <your-branch>
+```
+
+## Hexo Basics
+
+Some hexo command:
 
 ```bash
-  hexo new page categories
+hexo new post "<post name>"   # you can change post to another layout if you want
+hexo clean && hexo generate   # generate the static file
+hexo server   # run hexo in local environment
+hexo deploy   # hexo will push the static files automatically into the specific branch(gh-pages) of your repo!
 ```
 
-Then paste following codes to file: /source/categories/index.md
+## Have fun ^\_^
 
-```md
----
-title: categories
-type: categories
-layout: "categories"
----
-```
-
-## Tags
-
-Same as categories.
-
-## Friend Links
-
-```bash
-hexo new page friends
-```
-
-Then paste following codes to file: /source/friends/index.md
-
-```md
----
-title: friends
-type: friends
-layout: "friends"
----
-```
-
-Then edit `friends_link` in `_config.yml`
-
-## Gallery
-
-Need to write in the head of the markdown, this is not a good way to write, I hope to get a better way to write on github.
-
-```md
----
-title: Gallery
-
-albums: [["img_url", "img_caption"], ["img_url", "img_caption"]]
----
-```
-
-## Toc
-
-Use Tocbot to parse the title tags (h1~h6) in the content and insert the directory.
-
-- ayer/\_config.yml
-
-  ```bash
-  # Toc
-  toc: true
-  ```
-
-- If Toc is turned on in ayer/\_config.yml, then Tocbot will generate a Toc article directory in the title tag of each blog parsing content, but not all blogs require Toc, so in the Front-matter section of markdown Can be closed:
-
-  ```md
-  ---
-  no_toc: true
-  ---
-  ```
-
----
-
-<br/>
-
-## Code Contributors
-
-This project exists thanks to all the people who contribute.
-
-<a href="https://github.com/Shen-Yu/hexo-theme-ayer/graphs/contributors"><img src="https://opencollective.com/ayer/contributors.svg?width=890&button=false" /></a>
-
-## Stargazers over time
-
-[![Stargazers over time](https://starchart.cc/Shen-Yu/hexo-theme-ayer.svg)](https://starchart.cc/Shen-Yu/hexo-theme-ayer)
-
-## License
-
-<a src="https://github.com/Shen-Yu/hexo-theme-ayer">Ayer</a> by <a  href="https://github.com/Shen-Yu">Eric-Shen</a> is licensed under <a rel="license" href="https://github.com/Shen-Yu/hexo-theme-ayer/blob/master/LICENSE">SATA-License</a>.
-
-The basic idea is, whenever using a project using SATA license, people shall star/like/+1 that project and thank the author. Just imagine Google stared your project and send you a thank-you letter because they used your project in github!
-<br>
-
-本项目采用<a rel="license" href="https://github.com/Shen-Yu/hexo-theme-ayer/blob/master/LICENSE">SATA</a>开源协议，在遵守 MIT 许可证的前提下，你应该马不停蹄的给这个开源项目“点个赞”，比如 github 右上角的 star，然后你应该感谢这个开源项目的作者，作者信息可以在许可证头部的版权声明部分找到。<br>
-
-下面是几条 SATA 作者推荐的感谢途径，也是 SATA 包含的内容：
-
-- 给你使用的开源项目的作者发个 Email，和他交个朋友
-- 提出你在使用过程中发现的 BUG 或者提一些建设性的意见
-- 告诉你的朋友们这是一个多棒的开源项目
-- 当然，你也可以只是在心里默默的感激，不用让全世界都知道
+Please [Star](https://github.com/V-Vincen/hexo-theme-livemylife) this Project if you like it! [Follow](https://github.com/V-Vincen) would also be appreciated! Peace!
